@@ -5,7 +5,6 @@
   import { onMount } from 'svelte';
   import { goto } from '$app/navigation';
   import { writable } from 'svelte/store';
-  import { page } from '$app/stores';
   import RollConsole from '$lib/components/RollConsole.svelte';
   import LedgerFeed from '$lib/components/LedgerFeed.svelte';
   import StatusBar from '$lib/components/StatusBar.svelte';
@@ -180,3 +179,4 @@
     color: black;
   }
 </style>
+
