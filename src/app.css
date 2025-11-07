@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@source "./src/**/*.{svelte,js,ts}";
+
+@layer utilities {
+  .crt-screen {
+    @apply relative min-h-screen flex flex-col items-center justify-start overflow-hidden bg-bg text-fg;
+  }
+
+  .crt-overlay {
+    @apply absolute inset-0 mix-blend-overlay pointer-events-none;
+    @apply animate-flicker animate-glowpulse bg-scanlines opacity-60;
+  }
+
+  .neon-text {
+    @apply text-accent animate-textflicker;
+  }
+
+  .glow-accent {
+    @apply shadow-glow-accent;
+  }
+
+  .glow-fg {
+    @apply shadow-glow;
+  }
+}
+
+@keyframes flicker {
+  0%,19%,21%,23%,25%,54%,56%,100% { opacity: 0.6 }
+  20%,24%,55% { opacity: 0.4 }
+}
+
+@keyframes glowpulse {
+  0%,100% { filter: brightness(1.05) saturate(110%) }
+  50% { filter: brightness(1.2) saturate(140%) }
+}
+
+@keyframes textflicker {
+  from { opacity: 0.98; text-shadow: 0 0 3px var(--fg), 0 0 10px var(--accent); }
+  to   { opacity: 1;    text-shadow: 0 0 6px var(--accent), 0 0 15px var(--fg); }
+}
+
+@theme {
+  --color-bg: #0a0a0e;
+  --color-fg: #4ee3b6;
+  --color-accent: #ff0066;
+}
+:root {
+  --bg: #0a0a0e;
+  --fg: #4ee3b6;
+  --accent: #ff0066;
+  --glow: 0 0 10px var(--accent);
+}
+
+body {
+  margin: 0;
+  font-family: 'Share Tech Mono', monospace;
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: 'Share Tech Mono', monospace;
+  text-shadow: 0 0 3px var(--fg);
+}
+
+button {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+button:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.flicker-text {
+  animation: textflicker 0.2s infinite alternate;
+}
+
+/* --- Tell Tailwind to create the utilities --- */
+@layer utilities {
+  /* --- Animation utilities --- */
+  .animate-flicker {
+    animation: flicker 0.15s infinite;
+  }
+
+  .animate-glowpulse {
+    animation: glowpulse 3s ease-in-out infinite;
+  }
+
+  .animate-textflicker {
+    animation: textflicker 0.2s infinite alternate;
+  }
+
+  /* --- Background and glow utilities --- */
+  .bg-scanlines {
+    background-image: repeating-linear-gradient(
+      rgba(255,255,255,0.04) 0px,
+      rgba(0,0,0,0.1) 2px,
+      rgba(0,0,0,0.2) 3px
+    );
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 10px #4ee3b6, 0 0 20px #4ee3b6;
+  }
+
+  .shadow-glow-accent {
+    box-shadow: 0 0 10px #ff0066, 0 0 20px #ff0066;
+  }
+}
+
+
+/* --- 4:3 CRT frame --- */
+.crt-frame {
+  aspect-ratio: 4 / 3;
+  width: 90vmin;                /* previously 80vmin */
+  max-width: 1280px;            /* roomier, better for long forms */
+  margin: 2rem auto;
+  position: relative;
+  background: radial-gradient(circle at center, #111 0%, #000 70%);
+  border: 0.75rem solid #333;
+  border-radius: 1.2rem;
+  box-shadow:
+    0 0 40px #0ff2,
+    inset 0 0 60px #0008,
+    inset 0 0 15px #00ff8855;
+  overflow: hidden;
+}
+
+
+/* inner glass layer */
+.crt-inner {
+  position: absolute;
+  inset: 0;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  box-shadow:
+    inset 0 0 20px #00ffaa20,
+    inset 0 0 40px #00ffaa10;
+  background-color: var(--bg);
+}
+
+/* faint curvature & glass reflection */
+.crt-inner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      135deg,
+      rgba(255,255,255,0.05) 0%,
+      rgba(255,255,255,0.02) 40%,
+      transparent 60%
+    );
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+/* subtle scanline overlay */
+.crt-inner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    rgba(255,255,255,0.04) 0px,
+    rgba(0,0,0,0.08) 2px,
+    rgba(0,0,0,0.12) 3px
+  );
+  opacity: 0.6;
+  mix-blend-mode: overlay;
+  animation: flicker 0.2s infinite;
+  pointer-events: none;
+  filter: brightness(1.05);
+}
+
+/* --- Screen curvature & lens distortion --- */
+.crt-curvature {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) rgba(0, 0, 0, 0.3);
+  padding: 1.25rem 1.25rem 2rem 1.25rem; /* top/right/bottom/left */
+}
+
+/* curved-edge vignette to simulate tube depth */
+.crt-curvature::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    transparent 60%,
+    rgba(0, 0, 0, 0.4) 95%
+  );
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 20;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+/* slight RGB channel offset for chromatic aberration */
+.crt-curvature::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(90deg, rgba(255,0,0,0.03), rgba(0,255,255,0.03));
+  mix-blend-mode: screen;
+  opacity: 0.4;
+  animation: color-shift 6s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* optional: glow the scrollbar track for aesthetic consistency */
+.crt-curvature::-webkit-scrollbar {
+  width: 8px;
+}
+.crt-curvature::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.25);
+}
+.crt-curvature::-webkit-scrollbar-thumb {
+  background-color: var(--accent);
+  border-radius: 4px;
+  box-shadow: 0 0 6px var(--accent);
+}
+
+/* gentle color breathing */
+@keyframes color-shift {
+  0%, 100% { transform: translateX(0); opacity: 0.3; }
+  50% { transform: translateX(1px); opacity: 0.6; }
+}
+
+.ledger {
+  height: 300px;              /* fixed vertical size */
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  line-height: 1.4;
+  border-radius: 0.5rem;
+  box-shadow:
+    inset 0 0 20px rgba(0, 255, 170, 0.08),
+    0 0 20px rgba(255, 0, 102, 0.4);
+}
+
+/* subtle inner glow, to blend with the console edge */
+.ledger::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 0 30px rgba(0, 255, 170, 0.12);
+}
+
+/* blinking terminal cursor */
+.typewriter-cursor::after {
+  content: '_';
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+select,
+option {
+  background-color: var(--bg);
+  color: var(--fg);
+  border: 1px solid var(--accent);
+  font-family: 'Share Tech Mono', monospace;
+  text-shadow: 0 0 3px var(--fg);
+  box-shadow: 0 0 6px rgba(255, 0, 102, 0.4);
+  outline: none;
+}
+
+select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+}
+
+option {
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+/* Firefox-specific fix to avoid white popup background */
+select:-moz-focusring {
+  color: var(--fg);
+  text-shadow: 0 0 2px var(--fg);
+}
+
+/* Optional CRT-style hover/flicker */
+option:hover {
+  background-color: rgba(255, 0, 102, 0.2);
+}
