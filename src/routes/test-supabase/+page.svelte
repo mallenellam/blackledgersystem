@@ -1,3 +1,5 @@
+console.log(import.meta.env.VITE_SUPABASE_URL);
+
 <script>
   // --- Reactive state ---
   let primary = $state({ body: 6, mind: 6, soul: 6 });
