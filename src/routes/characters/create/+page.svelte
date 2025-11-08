@@ -159,11 +159,11 @@ let skills = $state([
 ]);
 
 let selectedSkills = $state([
-  { skill: '', die: 0 },
-  { skill: '', die: 0 },
-  { skill: '', die: 0 },
-  { skill: '', die: 0 },
-  { skill: '', die: 0 }
+  { name: 'Hacking', tier: 6 },
+  { name: 'Firearms', tier: 6 },
+  { name: 'Negotiation', tier: 6 },
+  { name: 'Stealth', tier: 6 },
+  { name: 'Medicine', tier: 6 }
 ]);
 
 // In devMode we’ll mock the skills list; otherwise, load from Supabase
@@ -759,3 +759,4 @@ span.text-accent.font-mono {
   100% { content: ' ▓▒░'; }
 }
 </style>
+
