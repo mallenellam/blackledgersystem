@@ -182,6 +182,7 @@
     <thead>
       <tr><th>CONTROL</th><th>ENTROPY</th><th>CONTROL%</th><th>ENTROPY%</th></tr>
     </thead>
+<tbody>
       <tr><td>d4</td><td>d4</td><td>37.5</td><td>62.5</td></tr>
       <tr><td>d6</td><td>d4</td><td>69.4</td><td>30.6</td></tr>
       <tr><td>d8</td><td>d4</td><td>78.1</td><td>21.9</td></tr>
@@ -197,6 +198,7 @@
       <tr><td>d8</td><td>d8</td><td>37.5</td><td>62.5</td></tr>
       <tr><td>d10</td><td>d8</td><td>47.9</td><td>52.1</td></tr>
       <tr><td>d12</td><td>d8</td><td>56.3</td><td>43.7</td></tr>
+</tbody>
     </table>
 
     <div class="echo-log">
@@ -210,14 +212,14 @@
     <table>
     <thead>
       <tr><th>Archetype</th><th>Description</th><th>CONTROL</th><th>ENTROPY</th></tr>
-    </thead>
+    </thead><tbody>
       <tr><td>Netrunner</td><td>Ghost in the datastream</td><td>d10</td><td>d8</td></tr>
       <tr><td>Solo</td><td>Ex-corp merc</td><td>d8</td><td>d8</td></tr>
       <tr><td>Fixer</td><td>Broker of information</td><td>d8</td><td>d6</td></tr>
       <tr><td>Techno</td><td>Engineer, drone whisperer</td><td>d8</td><td>d6</td></tr>
       <tr><td>Ghost Doc</td><td>Black-market surgeon</td><td>d6</td><td>d8</td></tr>
       <tr><td>Courier</td><td>Smuggler of data and flesh</td><td>d6</td><td>d10</td></tr>
-    </table>
+    </tbody></table>
 
     <h3>Step 2: Attributes</h3>
     <p>Distribute one d10, two d8s, and one d6 among Body, Mind, Nerve, and Ghost.</p>
@@ -226,13 +228,13 @@
     <table>
 <thead>
       <tr><th>Drives</th><th>Scars</th></tr>
-</thead>
+</thead><tbody>
       <tr><td>Revenge</td><td>Addiction</td></tr>
       <tr><td>Redemption</td><td>Betrayal</td></tr>
       <tr><td>Profit</td><td>Cyberpsychosis</td></tr>
       <tr><td>Freedom</td><td>Guilt</td></tr>
       <tr><td>Love</td><td>Code Corruption</td></tr>
-    </table>
+    </tbody></table>
   </details>
 
   <details>
@@ -249,11 +251,11 @@
     <summary>VI. Conditions & Damage</summary>
     <table><thead>
       <tr><th>State</th><th>Description</th><th>Effect</th></tr></thead>
-      <tr><td>Stable</td><td>Minor wear</td><td>None</td></tr>
+      <tbody><tr><td>Stable</td><td>Minor wear</td><td>None</td></tr>
       <tr><td>Compromised</td><td>Wounded or glitched</td><td>-1 die tier</td></tr>
       <tr><td>Critical</td><td>Failing system</td><td>-2 die tiers</td></tr>
       <tr><td>Erased</td><td>Deleted from play</td><td>Removed</td></tr>
-    </table>
+    </tbody></table>
   </details>
 
   <details>
