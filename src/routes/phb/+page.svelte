@@ -103,7 +103,7 @@
     margin-top: 4rem;
   }
 
-  /* CRT OVERLAY EFFECT */
+  /* CRT overlay */
   main::before {
     content: "";
     position: fixed;
@@ -151,9 +151,8 @@
   <details open>
     <summary>I. Introduction</summary>
     <p>Welcome to <strong>Atlanta A-Tier-9</strong>, the megacity where time drips like coolant and the rain never cleans anything.</p>
-    <p>You’re a <strong>runner</strong> — a ghost with a pulse, surviving in the cracks between megacorp protocols and syndicate law. You trade blood, data, and silence for currency that devalues before you can spend it.</p>
+    <p>You’re a <strong>runner</strong> — a ghost with a pulse, surviving in the cracks between megacorp protocols and syndicate law.</p>
     <p><em>Black Ledger</em> isn’t about winning. It’s about surviving long enough to make the system notice you existed.</p>
-
     <div class="echo-log">
       ECHO / SYSTEM LOG 001 — “Entropy is the only constant. Every action increases it. The dice only measure how fast.”
     </div>
@@ -166,7 +165,6 @@
       <li><strong>CONTROL</strong> — order, precision, logic, human defiance.</li>
       <li><strong>ENTROPY</strong> — chaos, decay, the city’s will to dissolve.</li>
     </ul>
-    <p>You’ll roll both. The world doesn’t care who wins; Echo just records which side falls slower.</p>
   </details>
 
   <details>
@@ -175,30 +173,30 @@
     <ul>
       <li>The stronger your <strong>CONTROL</strong>, the larger your die.</li>
       <li>The more chaos in the scene, the larger the <strong>ENTROPY</strong> die.</li>
-      <li><strong>Ties favor ENTROPY</strong>. The world decays by default.</li>
+      <li><strong>Ties favor ENTROPY.</strong> The world decays by default.</li>
     </ul>
 
     <table>
-    <thead>
-      <tr><th>CONTROL</th><th>ENTROPY</th><th>CONTROL%</th><th>ENTROPY%</th></tr>
-    </thead>
-<tbody>
-      <tr><td>d4</td><td>d4</td><td>37.5</td><td>62.5</td></tr>
-      <tr><td>d6</td><td>d4</td><td>69.4</td><td>30.6</td></tr>
-      <tr><td>d8</td><td>d4</td><td>78.1</td><td>21.9</td></tr>
-      <tr><td>d10</td><td>d4</td><td>83.8</td><td>16.2</td></tr>
-      <tr><td>d12</td><td>d4</td><td>87.5</td><td>12.5</td></tr>
-      <tr><td>d4</td><td>d6</td><td>25.0</td><td>75.0</td></tr>
-      <tr><td>d6</td><td>d6</td><td>37.5</td><td>62.5</td></tr>
-      <tr><td>d8</td><td>d6</td><td>53.1</td><td>46.9</td></tr>
-      <tr><td>d10</td><td>d6</td><td>63.9</td><td>36.1</td></tr>
-      <tr><td>d12</td><td>d6</td><td>71.5</td><td>28.5</td></tr>
-      <tr><td>d4</td><td>d8</td><td>15.6</td><td>84.4</td></tr>
-      <tr><td>d6</td><td>d8</td><td>28.5</td><td>71.5</td></tr>
-      <tr><td>d8</td><td>d8</td><td>37.5</td><td>62.5</td></tr>
-      <tr><td>d10</td><td>d8</td><td>47.9</td><td>52.1</td></tr>
-      <tr><td>d12</td><td>d8</td><td>56.3</td><td>43.7</td></tr>
-</tbody>
+      <thead>
+        <tr>
+          <th>CONTROL</th>
+          <th>ENTROPY</th>
+          <th>CONTROL%</th>
+          <th>ENTROPY%</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>d4</td><td>d4</td><td>37.5</td><td>62.5</td></tr>
+        <tr><td>d6</td><td>d4</td><td>69.4</td><td>30.6</td></tr>
+        <tr><td>d8</td><td>d4</td><td>78.1</td><td>21.9</td></tr>
+        <tr><td>d10</td><td>d4</td><td>83.8</td><td>16.2</td></tr>
+        <tr><td>d12</td><td>d4</td><td>87.5</td><td>12.5</td></tr>
+        <tr><td>d4</td><td>d6</td><td>25.0</td><td>75.0</td></tr>
+        <tr><td>d6</td><td>d6</td><td>37.5</td><td>62.5</td></tr>
+        <tr><td>d8</td><td>d6</td><td>53.1</td><td>46.9</td></tr>
+        <tr><td>d10</td><td>d6</td><td>63.9</td><td>36.1</td></tr>
+        <tr><td>d12</td><td>d6</td><td>71.5</td><td>28.5</td></tr>
+      </tbody>
     </table>
 
     <div class="echo-log">
@@ -210,31 +208,40 @@
     <summary>IV. Character Creation</summary>
     <h3>Step 1: Archetype</h3>
     <table>
-    <thead>
-      <tr><th>Archetype</th><th>Description</th><th>CONTROL</th><th>ENTROPY</th></tr>
-    </thead><tbody>
-      <tr><td>Netrunner</td><td>Ghost in the datastream</td><td>d10</td><td>d8</td></tr>
-      <tr><td>Solo</td><td>Ex-corp merc</td><td>d8</td><td>d8</td></tr>
-      <tr><td>Fixer</td><td>Broker of information</td><td>d8</td><td>d6</td></tr>
-      <tr><td>Techno</td><td>Engineer, drone whisperer</td><td>d8</td><td>d6</td></tr>
-      <tr><td>Ghost Doc</td><td>Black-market surgeon</td><td>d6</td><td>d8</td></tr>
-      <tr><td>Courier</td><td>Smuggler of data and flesh</td><td>d6</td><td>d10</td></tr>
-    </tbody></table>
+      <thead>
+        <tr>
+          <th>Archetype</th>
+          <th>Description</th>
+          <th>CONTROL</th>
+          <th>ENTROPY</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Netrunner</td><td>Ghost in the datastream</td><td>d10</td><td>d8</td></tr>
+        <tr><td>Solo</td><td>Ex-corp merc</td><td>d8</td><td>d8</td></tr>
+        <tr><td>Fixer</td><td>Broker of information</td><td>d8</td><td>d6</td></tr>
+        <tr><td>Techno</td><td>Engineer, drone whisperer</td><td>d8</td><td>d6</td></tr>
+        <tr><td>Ghost Doc</td><td>Black-market surgeon</td><td>d6</td><td>d8</td></tr>
+        <tr><td>Courier</td><td>Smuggler of data and flesh</td><td>d6</td><td>d10</td></tr>
+      </tbody>
+    </table>
 
     <h3>Step 2: Attributes</h3>
     <p>Distribute one d10, two d8s, and one d6 among Body, Mind, Nerve, and Ghost.</p>
 
     <h3>Step 3: Drives & Scars</h3>
     <table>
-<thead>
-      <tr><th>Drives</th><th>Scars</th></tr>
-</thead><tbody>
-      <tr><td>Revenge</td><td>Addiction</td></tr>
-      <tr><td>Redemption</td><td>Betrayal</td></tr>
-      <tr><td>Profit</td><td>Cyberpsychosis</td></tr>
-      <tr><td>Freedom</td><td>Guilt</td></tr>
-      <tr><td>Love</td><td>Code Corruption</td></tr>
-    </tbody></table>
+      <thead>
+        <tr><th>Drives</th><th>Scars</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Revenge</td><td>Addiction</td></tr>
+        <tr><td>Redemption</td><td>Betrayal</td></tr>
+        <tr><td>Profit</td><td>Cyberpsychosis</td></tr>
+        <tr><td>Freedom</td><td>Guilt</td></tr>
+        <tr><td>Love</td><td>Code Corruption</td></tr>
+      </tbody>
+    </table>
   </details>
 
   <details>
@@ -249,13 +256,17 @@
 
   <details>
     <summary>VI. Conditions & Damage</summary>
-    <table><thead>
-      <tr><th>State</th><th>Description</th><th>Effect</th></tr></thead>
-      <tbody><tr><td>Stable</td><td>Minor wear</td><td>None</td></tr>
-      <tr><td>Compromised</td><td>Wounded or glitched</td><td>-1 die tier</td></tr>
-      <tr><td>Critical</td><td>Failing system</td><td>-2 die tiers</td></tr>
-      <tr><td>Erased</td><td>Deleted from play</td><td>Removed</td></tr>
-    </tbody></table>
+    <table>
+      <thead>
+        <tr><th>State</th><th>Description</th><th>Effect</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Stable</td><td>Minor wear</td><td>None</td></tr>
+        <tr><td>Compromised</td><td>Wounded or glitched</td><td>-1 die tier</td></tr>
+        <tr><td>Critical</td><td>Failing system</td><td>-2 die tiers</td></tr>
+        <tr><td>Erased</td><td>Deleted from play</td><td>Removed</td></tr>
+      </tbody>
+    </table>
   </details>
 
   <details>
