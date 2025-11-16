@@ -179,7 +179,9 @@
     </ul>
 
     <table>
+    <thead>
       <tr><th>CONTROL</th><th>ENTROPY</th><th>CONTROL%</th><th>ENTROPY%</th></tr>
+    </thead>
       <tr><td>d4</td><td>d4</td><td>37.5</td><td>62.5</td></tr>
       <tr><td>d6</td><td>d4</td><td>69.4</td><td>30.6</td></tr>
       <tr><td>d8</td><td>d4</td><td>78.1</td><td>21.9</td></tr>
@@ -206,7 +208,9 @@
     <summary>IV. Character Creation</summary>
     <h3>Step 1: Archetype</h3>
     <table>
+    <thead>
       <tr><th>Archetype</th><th>Description</th><th>CONTROL</th><th>ENTROPY</th></tr>
+    </thead>
       <tr><td>Netrunner</td><td>Ghost in the datastream</td><td>d10</td><td>d8</td></tr>
       <tr><td>Solo</td><td>Ex-corp merc</td><td>d8</td><td>d8</td></tr>
       <tr><td>Fixer</td><td>Broker of information</td><td>d8</td><td>d6</td></tr>
@@ -220,7 +224,9 @@
 
     <h3>Step 3: Drives & Scars</h3>
     <table>
+<thead>
       <tr><th>Drives</th><th>Scars</th></tr>
+</thead>
       <tr><td>Revenge</td><td>Addiction</td></tr>
       <tr><td>Redemption</td><td>Betrayal</td></tr>
       <tr><td>Profit</td><td>Cyberpsychosis</td></tr>
@@ -241,8 +247,8 @@
 
   <details>
     <summary>VI. Conditions & Damage</summary>
-    <table>
-      <tr><th>State</th><th>Description</th><th>Effect</th></tr>
+    <table><thead>
+      <tr><th>State</th><th>Description</th><th>Effect</th></tr></thead>
       <tr><td>Stable</td><td>Minor wear</td><td>None</td></tr>
       <tr><td>Compromised</td><td>Wounded or glitched</td><td>-1 die tier</td></tr>
       <tr><td>Critical</td><td>Failing system</td><td>-2 die tiers</td></tr>
