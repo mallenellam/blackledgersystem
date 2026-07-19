@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+  <sys_script_include action="INSERT_OR_UPDATE">
+    <sys_id>0a05da61e8e34595b7fb2e2e0c6772f2</sys_id>
+    <sys_scope display_value="x_134879_black_l_0">e41c0d7753ce4710dcd35eb0a0490e3a</sys_scope>
+    <sys_update_name>sys_script_include_0a05da61e8e34595b7fb2e2e0c6772f2</sys_update_name>
+    <access>public</access>
+    <active>true</active>
+    <api_name>x_134879_black_l_0.BlackLedgerCharacterCreation</api_name>
+    <caller_access/>
+    <client_callable>true</client_callable>
+    <description>Character creation engine for the Black Ledger System. Validates die allocation rules (one d8, one d6, four d4) and creates character records with linked attribute assignments.</description>
+    <mobile_callable>false</mobile_callable>
+    <name>BlackLedgerCharacterCreation</name>
+    <sandbox_callable>false</sandbox_callable>
+    <script><![CDATA[var BlackLedgerCharacterCreation = Class.create()
+
+BlackLedgerCharacterCreation.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    initialize: function () {
+        this.ATTRIBUTES = ['Body', 'Reflexes', 'Tech', 'Cool', 'Intelligence', 'Willpower'];
+        this.VALID_DICE = ['d4', 'd6', 'd8'];
+    },
+
+    /**
+     * Validate that a die allocation follows character creation rules:
+     * - Exactly one d8
+     * - Exactly one d6
+     * - Four d4s
+     * @param {object} allocation - Map of attribute name -> die size
+     * @returns {object} { valid: boolean, errors: string[] }
+     */
+    validateAllocation: function (allocation) {
+        var errors = [];
+        var counts = { d4: 0, d6: 0, d8: 0 };
+
+        for (var i = 0; i < this.ATTRIBUTES.length; i++) {
+            var attr = this.ATTRIBUTES[i];
+            var die = allocation[attr];
+
+            if (!die) {
+                errors.push('Missing die assignment for ' + attr);
+                continue;
+            }
+
+            if (this.VALID_DICE.indexOf(die) === -1) {
+                errors.push('Invalid die size "' + die + '" for ' + attr + '. Must be d4, d6, or d8.');
+                continue;
+            }
+
+            counts[die]++;
+        }
+
+        if (counts.d8 !== 1) {
+            errors.push('Must have exactly one attribute at d8 (found ' + counts.d8 + ')');
+        }
+        if (counts.d6 !== 1) {
+            errors.push('Must have exactly one attribute at d6 (found ' + counts.d6 + ')');
+        }
+        if (counts.d4 !== 4) {
+            errors.push('Must have exactly four attributes at d4 (found ' + counts.d4 + ')');
+        }
+
+        return {
+            valid: errors.length === 0,
+            errors: errors
+        };
+    },
+
+    /**
+     * Create a new character with validated die allocation
+     * @param {string} name - Character name
+     * @param {string} handle - Character alias
+     * @param {string} role - Character role
+     * @param {string} backstory - Character backstory
+     * @param {object} allocation - Map of attribute name -> die size
+     * @returns {object} Result with character sys_id or errors
+     */
+    createCharacter: function (name, handle, role, backstory, allocation) {
+        var validation = this.validateAllocation(allocation);
+        if (!validation.valid) {
+            return { success: false, errors: validation.errors };
+        }
+
+        // Create the character record
+        var charGr = new GlideRecord('x_134879_black_l_0_characters');
+        charGr.initialize();
+        charGr.setValue('name', name);
+        charGr.setValue('handle', handle || '');
+        charGr.setValue('role', role || '');
+        charGr.setValue('backstory', backstory || '');
+        charGr.setValue('status', 'active');
+        charGr.setValue('level', 1);
+        charGr.setValue('credits', 0);
+        charGr.setValue('humanity', 100);
+        charGr.setValue('active', true);
+
+        var charId = charGr.insert();
+        if (!charId) {
+            return { success: false, errors: ['Failed to create character record'] };
+        }
+
+        // Create attribute records
+        var attrErrors = [];
+        for (var i = 0; i < this.ATTRIBUTES.length; i++) {
+            var attrName = this.ATTRIBUTES[i];
+            var die = allocation[attrName];
+
+            // Look up the attribute reference record
+            var attrRefGr = new GlideRecord('x_134879_black_l_0_attributes_ref');
+            attrRefGr.addQuery('name', attrName);
+            attrRefGr.query();
+
+            if (!attrRefGr.next()) {
+                attrErrors.push('Attribute reference not found: ' + attrName);
+                continue;
+            }
+
+            // Create character_attributes record
+            var caGr = new GlideRecord('x_134879_black_l_0_character_attributes');
+            caGr.initialize();
+            caGr.setValue('character', charId);
+            caGr.setValue('attribute', attrRefGr.getUniqueValue());
+            caGr.setValue('base_die', die);
+            caGr.setValue('current_die', die);
+            caGr.setValue('temporary_step', 0);
+
+            if (!caGr.insert()) {
+                attrErrors.push('Failed to create attribute record for ' + attrName);
+            }
+        }
+
+        if (attrErrors.length > 0) {
+            return { success: true, character_id: charId, warnings: attrErrors };
+        }
+
+        return { success: true, character_id: charId };
+    },
+
+    /**
+     * GlideAjax entry point: validate an allocation
+     * Parameter: sysparm_allocation (JSON string)
+     */
+    ajaxValidateAllocation: function () {
+        var allocationStr = this.getParameter('sysparm_allocation');
+        try {
+            var allocation = JSON.parse(allocationStr);
+            var result = this.validateAllocation(allocation);
+            return JSON.stringify(result);
+        } catch (e) {
+            return JSON.stringify({ valid: false, errors: ['Invalid allocation data'] });
+        }
+    },
+
+    /**
+     * GlideAjax entry point: create a character
+     * Parameters: sysparm_name, sysparm_handle, sysparm_role, sysparm_backstory, sysparm_allocation
+     */
+    ajaxCreateCharacter: function () {
+        var name = this.getParameter('sysparm_name');
+        var handle = this.getParameter('sysparm_handle') || '';
+        var role = this.getParameter('sysparm_role') || '';
+        var backstory = this.getParameter('sysparm_backstory') || '';
+        var allocationStr = this.getParameter('sysparm_allocation');
+
+        if (!name) {
+            return JSON.stringify({ success: false, errors: ['Character name is required'] });
+        }
+
+        try {
+            var allocation = JSON.parse(allocationStr);
+            var result = this.createCharacter(name, handle, role, backstory, allocation);
+            return JSON.stringify(result);
+        } catch (e) {
+            return JSON.stringify({ success: false, errors: ['Invalid allocation data: ' + e.message] });
+        }
+    },
+
+    /**
+     * GlideAjax entry point: get the list of attribute names
+     */
+    ajaxGetAttributes: function () {
+        var attributes = [];
+        var gr = new GlideRecord('x_134879_black_l_0_attributes_ref');
+        gr.orderBy('sort_order');
+        gr.query();
+
+        while (gr.next()) {
+            attributes.push({
+                sys_id: gr.getUniqueValue(),
+                name: gr.getValue('name'),
+                abbreviation: gr.getValue('abbreviation'),
+                category: gr.getValue('category'),
+                description: gr.getValue('description')
+            });
+        }
+
+        return JSON.stringify(attributes);
+    },
+
+    type: 'BlackLedgerCharacterCreation'
+});
+]]></script>
+  </sys_script_include>
+</record_update>

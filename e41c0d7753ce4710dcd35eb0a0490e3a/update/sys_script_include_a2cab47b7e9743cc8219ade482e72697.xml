@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+  <sys_script_include action="INSERT_OR_UPDATE">
+    <sys_id>a2cab47b7e9743cc8219ade482e72697</sys_id>
+    <sys_scope display_value="x_134879_black_l_0">e41c0d7753ce4710dcd35eb0a0490e3a</sys_scope>
+    <sys_update_name>sys_script_include_a2cab47b7e9743cc8219ade482e72697</sys_update_name>
+    <access>public</access>
+    <active>true</active>
+    <api_name>x_134879_black_l_0.BlackLedgerDice</api_name>
+    <caller_access/>
+    <client_callable>true</client_callable>
+    <description>Dice resolution engine for the Black Ledger System. Handles rolling attribute dice vs difficulty dice, computing outcomes by difference, and stepping die sizes up/down.</description>
+    <mobile_callable>false</mobile_callable>
+    <name>BlackLedgerDice</name>
+    <sandbox_callable>false</sandbox_callable>
+    <script><![CDATA[var BlackLedgerDice = Class.create()
+
+BlackLedgerDice.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    initialize: function () {
+        this.DIE_SIZES = [4, 6, 8, 10, 12];
+        this.DIE_LABELS = ['d4', 'd6', 'd8', 'd10', 'd12'];
+    },
+
+    /**
+     * Roll a single die of the given size
+     * @param {number} sides - Number of sides (4, 6, 8, 10, 12)
+     * @returns {number} Result between 1 and sides
+     */
+    rollDie: function (sides) {
+        return Math.floor(Math.random() * sides) + 1;
+    },
+
+    /**
+     * Parse a die notation string to get the number of sides
+     * @param {string} dieNotation - e.g. "d8", "d6"
+     * @returns {number} Number of sides
+     */
+    parseDie: function (dieNotation) {
+        if (!dieNotation || typeof dieNotation !== 'string') {
+            return 4;
+        }
+        var num = parseInt(dieNotation.replace('d', ''), 10);
+        if (isNaN(num) || this.DIE_SIZES.indexOf(num) === -1) {
+            return 4;
+        }
+        return num;
+    },
+
+    /**
+     * Resolve an attribute check against a difficulty
+     * @param {string} attributeDie - The attribute die notation (e.g. "d8")
+     * @param {string} difficultyDie - The difficulty die notation (e.g. "d6")
+     * @returns {object} Result object with rolls, difference, and outcome
+     */
+    resolveCheck: function (attributeDie, difficultyDie) {
+        var attrSides = this.parseDie(attributeDie);
+        var diffSides = this.parseDie(difficultyDie);
+
+        var attrRoll = this.rollDie(attrSides);
+        var diffRoll = this.rollDie(diffSides);
+        var difference = attrRoll - diffRoll;
+
+        var outcome = this._getOutcome(difference);
+
+        return {
+            attributeDie: 'd' + attrSides,
+            difficultyDie: 'd' + diffSides,
+            attributeRoll: attrRoll,
+            difficultyRoll: diffRoll,
+            difference: difference,
+            success: difference >= 0,
+            outcome: outcome.level,
+            description: outcome.description
+        };
+    },
+
+    /**
+     * Determine the narrative outcome based on the difference
+     * @param {number} difference - The roll difference
+     * @returns {object} Outcome level and description
+     */
+    _getOutcome: function (difference) {
+        if (difference >= 7) {
+            return { level: 'legendary', description: 'Legendary Success — beyond all expectation' };
+        } else if (difference >= 5) {
+            return { level: 'great_success', description: 'Great Success — exceptional result' };
+        } else if (difference >= 3) {
+            return { level: 'strong_success', description: 'Strong Success — clear advantage' };
+        } else if (difference >= 1) {
+            return { level: 'success', description: 'Success — you pull it off' };
+        } else if (difference === 0) {
+            return { level: 'bare_success', description: 'Bare Success — just barely, with a cost or complication' };
+        } else if (difference >= -2) {
+            return { level: 'failure', description: 'Failure — things don\'t go your way' };
+        } else if (difference >= -4) {
+            return { level: 'bad_failure', description: 'Bad Failure — consequences are significant' };
+        } else if (difference >= -6) {
+            return { level: 'severe_failure', description: 'Severe Failure — serious repercussions' };
+        } else {
+            return { level: 'catastrophic', description: 'Catastrophic Failure — everything goes wrong' };
+        }
+    },
+
+    /**
+     * Step a die size up or down
+     * @param {string} currentDie - Current die notation (e.g. "d6")
+     * @param {number} steps - Positive = step up, negative = step down
+     * @returns {string} New die notation
+     */
+    stepDie: function (currentDie, steps) {
+        var sides = this.parseDie(currentDie);
+        var currentIndex = this.DIE_SIZES.indexOf(sides);
+        var newIndex = Math.max(0, Math.min(this.DIE_SIZES.length - 1, currentIndex + steps));
+        return 'd' + this.DIE_SIZES[newIndex];
+    },
+
+    /**
+     * GlideAjax entry point: resolve an attribute check
+     * Parameters: sysparm_attribute_die, sysparm_difficulty_die
+     */
+    ajaxResolveCheck: function () {
+        var attributeDie = this.getParameter('sysparm_attribute_die') || 'd4';
+        var difficultyDie = this.getParameter('sysparm_difficulty_die') || 'd4';
+        var result = this.resolveCheck(attributeDie, difficultyDie);
+        return JSON.stringify(result);
+    },
+
+    /**
+     * GlideAjax entry point: get character attribute dice for a character
+     * Parameter: sysparm_character_id
+     */
+    ajaxGetCharacterDice: function () {
+        var characterId = this.getParameter('sysparm_character_id');
+        var attributes = [];
+
+        var gr = new GlideRecord('x_134879_black_l_0_character_attributes');
+        gr.addQuery('character', characterId);
+        gr.query();
+
+        while (gr.next()) {
+            attributes.push({
+                sys_id: gr.getUniqueValue(),
+                attribute_name: gr.attribute.getDisplayValue(),
+                base_die: gr.getValue('base_die') || 'd4',
+                current_die: gr.getValue('current_die') || 'd4',
+                temporary_step: parseInt(gr.getValue('temporary_step') || '0', 10)
+            });
+        }
+
+        return JSON.stringify(attributes);
+    },
+
+    type: 'BlackLedgerDice'
+});
+]]></script>
+  </sys_script_include>
+</record_update>
