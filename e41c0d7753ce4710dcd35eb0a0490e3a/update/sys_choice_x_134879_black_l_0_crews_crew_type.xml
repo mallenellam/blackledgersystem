@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+  <sys_choice_set field="crew_type" table="x_134879_black_l_0_crews">
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>f8f6e94578a7479295f0b4d766d68159</sys_id>
+      <name>x_134879_black_l_0_crews</name>
+      <element>crew_type</element>
+      <label>Mercenary</label>
+      <value>mercenary</value>
+      <sequence>0</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>d0b10c0ea19246e08a16020989917d2b</sys_id>
+      <name>x_134879_black_l_0_crews</name>
+      <element>crew_type</element>
+      <label>Heist</label>
+      <value>heist</value>
+      <sequence>1</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>c787ea049f2044bf9f72cfe68668bd71</sys_id>
+      <name>x_134879_black_l_0_crews</name>
+      <element>crew_type</element>
+      <label>Fixers</label>
+      <value>fixers</value>
+      <sequence>2</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>0eedc434db1f4a8a900479f91aa94b5a</sys_id>
+      <name>x_134879_black_l_0_crews</name>
+      <element>crew_type</element>
+      <label>Hackers</label>
+      <value>hackers</value>
+      <sequence>3</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>121ef5c0976449a281b823c0d1fceec2</sys_id>
+      <name>x_134879_black_l_0_crews</name>
+      <element>crew_type</element>
+      <label>Enforcers</label>
+      <value>enforcers</value>
+      <sequence>4</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice_set action="INSERT_OR_UPDATE">
+      <sys_id>ed9c316c4b1d43beb44a996db030d6c3</sys_id>
+      <sys_scope display_value="x_134879_black_l_0">e41c0d7753ce4710dcd35eb0a0490e3a</sys_scope>
+      <name>x_134879_black_l_0_crews</name>
+      <element>crew_type</element>
+    </sys_choice_set>
+  </sys_choice_set>
+</record_update>

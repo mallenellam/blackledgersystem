@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+  <sys_choice_set field="role" table="x_134879_black_l_0_characters">
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>0f7e56052d7341fb89cf481dc7128e8e</sys_id>
+      <name>x_134879_black_l_0_characters</name>
+      <element>role</element>
+      <label>Solo</label>
+      <value>solo</value>
+      <sequence>0</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>8fda539b48d148d99af8f7844ed82e29</sys_id>
+      <name>x_134879_black_l_0_characters</name>
+      <element>role</element>
+      <label>Netrunner</label>
+      <value>netrunner</value>
+      <sequence>1</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>63cd2bb22a524a4fae838cf8efdc6fb9</sys_id>
+      <name>x_134879_black_l_0_characters</name>
+      <element>role</element>
+      <label>Tech</label>
+      <value>tech</value>
+      <sequence>2</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>517a2963812249f7b609384581464bc2</sys_id>
+      <name>x_134879_black_l_0_characters</name>
+      <element>role</element>
+      <label>Medtech</label>
+      <value>medtech</value>
+      <sequence>3</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>10183678a1e44567b0e09190794eb3e3</sys_id>
+      <name>x_134879_black_l_0_characters</name>
+      <element>role</element>
+      <label>Media</label>
+      <value>media</value>
+      <sequence>4</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>5e9a9954299640daa618db64a4f8f4a1</sys_id>
+      <name>x_134879_black_l_0_characters</name>
+      <element>role</element>
+      <label>Exec</label>
+      <value>exec</value>
+      <sequence>5</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>2e7a02cd3fba4bfab116cc25ba406438</sys_id>
+      <name>x_134879_black_l_0_characters</name>
+      <element>role</element>
+      <label>Fixer</label>
+      <value>fixer</value>
+      <sequence>6</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>a5ac42a889804a47a8807f61c6a62096</sys_id>
+      <name>x_134879_black_l_0_characters</name>
+      <element>role</element>
+      <label>Nomad</label>
+      <value>nomad</value>
+      <sequence>7</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>edf5a4fcedca4810b2b543ab9f9bc314</sys_id>
+      <name>x_134879_black_l_0_characters</name>
+      <element>role</element>
+      <label>Rocker</label>
+      <value>rocker</value>
+      <sequence>8</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice_set action="INSERT_OR_UPDATE">
+      <sys_id>e723f550e43f44e990ce024bb703e9bc</sys_id>
+      <sys_scope display_value="x_134879_black_l_0">e41c0d7753ce4710dcd35eb0a0490e3a</sys_scope>
+      <name>x_134879_black_l_0_characters</name>
+      <element>role</element>
+    </sys_choice_set>
+  </sys_choice_set>
+</record_update>

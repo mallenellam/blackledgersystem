@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+  <sys_choice_set field="status" table="x_134879_black_l_0_clocks">
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>c4a2e321cfe445fab6c18d3679fede80</sys_id>
+      <name>x_134879_black_l_0_clocks</name>
+      <element>status</element>
+      <label>Active</label>
+      <value>active</value>
+      <sequence>0</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>730432b413394f7da360dc11ee9f70cf</sys_id>
+      <name>x_134879_black_l_0_clocks</name>
+      <element>status</element>
+      <label>Completed</label>
+      <value>completed</value>
+      <sequence>1</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>a83f16fcbf9d4d079f6e057d8d01e3d8</sys_id>
+      <name>x_134879_black_l_0_clocks</name>
+      <element>status</element>
+      <label>Failed</label>
+      <value>failed</value>
+      <sequence>2</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>6e2c351333b149f1a04d9fa57318b575</sys_id>
+      <name>x_134879_black_l_0_clocks</name>
+      <element>status</element>
+      <label>Paused</label>
+      <value>paused</value>
+      <sequence>3</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice_set action="INSERT_OR_UPDATE">
+      <sys_id>96811b0861b8423b87a1b9f58eb60c90</sys_id>
+      <sys_scope display_value="x_134879_black_l_0">e41c0d7753ce4710dcd35eb0a0490e3a</sys_scope>
+      <name>x_134879_black_l_0_clocks</name>
+      <element>status</element>
+    </sys_choice_set>
+  </sys_choice_set>
+</record_update>

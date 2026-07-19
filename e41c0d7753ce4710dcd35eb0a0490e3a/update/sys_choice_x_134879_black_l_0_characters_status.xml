@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+  <sys_choice_set field="status" table="x_134879_black_l_0_characters">
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>eded7d4740274305beca268526d1897b</sys_id>
+      <name>x_134879_black_l_0_characters</name>
+      <element>status</element>
+      <label>Active</label>
+      <value>active</value>
+      <sequence>0</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>a875fe7050734098aa76212d4bd13608</sys_id>
+      <name>x_134879_black_l_0_characters</name>
+      <element>status</element>
+      <label>Injured</label>
+      <value>injured</value>
+      <sequence>1</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>1072763157cd409785dbaa9ec5373bdc</sys_id>
+      <name>x_134879_black_l_0_characters</name>
+      <element>status</element>
+      <label>Critical</label>
+      <value>critical</value>
+      <sequence>2</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>430da4cf4c2e4878bff8e4fce2bfbe08</sys_id>
+      <name>x_134879_black_l_0_characters</name>
+      <element>status</element>
+      <label>Dead</label>
+      <value>dead</value>
+      <sequence>3</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>3ffe0afcb22b4fbda846e62dc52d60ad</sys_id>
+      <name>x_134879_black_l_0_characters</name>
+      <element>status</element>
+      <label>Retired</label>
+      <value>retired</value>
+      <sequence>4</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice_set action="INSERT_OR_UPDATE">
+      <sys_id>cfe75eff07e6437fa093a70c417def9f</sys_id>
+      <sys_scope display_value="x_134879_black_l_0">e41c0d7753ce4710dcd35eb0a0490e3a</sys_scope>
+      <name>x_134879_black_l_0_characters</name>
+      <element>status</element>
+    </sys_choice_set>
+  </sys_choice_set>
+</record_update>

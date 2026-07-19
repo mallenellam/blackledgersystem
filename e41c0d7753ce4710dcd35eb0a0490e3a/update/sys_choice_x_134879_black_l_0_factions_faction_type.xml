@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+  <sys_choice_set field="faction_type" table="x_134879_black_l_0_factions">
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>b8f67703b9a04f8399b3d3341d7ed487</sys_id>
+      <name>x_134879_black_l_0_factions</name>
+      <element>faction_type</element>
+      <label>Corporation</label>
+      <value>corporation</value>
+      <sequence>0</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>ad2a0f5c0e1b49f48522eae6aabc5915</sys_id>
+      <name>x_134879_black_l_0_factions</name>
+      <element>faction_type</element>
+      <label>Gang</label>
+      <value>gang</value>
+      <sequence>1</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>540c9e851c6f41a9926302a9d7398f5e</sys_id>
+      <name>x_134879_black_l_0_factions</name>
+      <element>faction_type</element>
+      <label>Government</label>
+      <value>government</value>
+      <sequence>2</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>7652ae11dae34628aa50c1c06915a618</sys_id>
+      <name>x_134879_black_l_0_factions</name>
+      <element>faction_type</element>
+      <label>Syndicate</label>
+      <value>syndicate</value>
+      <sequence>3</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>0ccbc85b2d134632a2e7b9ff307b8819</sys_id>
+      <name>x_134879_black_l_0_factions</name>
+      <element>faction_type</element>
+      <label>Nomad Clan</label>
+      <value>nomad</value>
+      <sequence>4</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>fb971d02df734e6a9f7810d91e0c6810</sys_id>
+      <name>x_134879_black_l_0_factions</name>
+      <element>faction_type</element>
+      <label>Fixer Network</label>
+      <value>fixer_network</value>
+      <sequence>5</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice_set action="INSERT_OR_UPDATE">
+      <sys_id>6ca3016297034324aaaa9c99efd879ea</sys_id>
+      <sys_scope display_value="x_134879_black_l_0">e41c0d7753ce4710dcd35eb0a0490e3a</sys_scope>
+      <name>x_134879_black_l_0_factions</name>
+      <element>faction_type</element>
+    </sys_choice_set>
+  </sys_choice_set>
+</record_update>

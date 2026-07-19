@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+  <sys_choice_set field="condition" table="x_134879_black_l_0_character_cyberware">
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>71f55631e82f4a79a09c90bb0f86b50b</sys_id>
+      <name>x_134879_black_l_0_character_cyberware</name>
+      <element>condition</element>
+      <label>Pristine</label>
+      <value>pristine</value>
+      <sequence>0</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>d95975ef7eca4b59b33db90af927bbe9</sys_id>
+      <name>x_134879_black_l_0_character_cyberware</name>
+      <element>condition</element>
+      <label>Good</label>
+      <value>good</value>
+      <sequence>1</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>b8a836f8b7e549a3a6dec37639baddb8</sys_id>
+      <name>x_134879_black_l_0_character_cyberware</name>
+      <element>condition</element>
+      <label>Worn</label>
+      <value>worn</value>
+      <sequence>2</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>0b35f4dd9f8343518e8bd5221ef7a80d</sys_id>
+      <name>x_134879_black_l_0_character_cyberware</name>
+      <element>condition</element>
+      <label>Damaged</label>
+      <value>damaged</value>
+      <sequence>3</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>ebb74544ea6e4bf98153864826aee503</sys_id>
+      <name>x_134879_black_l_0_character_cyberware</name>
+      <element>condition</element>
+      <label>Malfunctioning</label>
+      <value>malfunctioning</value>
+      <sequence>4</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice_set action="INSERT_OR_UPDATE">
+      <sys_id>9eb0937c9e0e436397ad2d82569ff9b4</sys_id>
+      <sys_scope display_value="x_134879_black_l_0">e41c0d7753ce4710dcd35eb0a0490e3a</sys_scope>
+      <name>x_134879_black_l_0_character_cyberware</name>
+      <element>condition</element>
+    </sys_choice_set>
+  </sys_choice_set>
+</record_update>

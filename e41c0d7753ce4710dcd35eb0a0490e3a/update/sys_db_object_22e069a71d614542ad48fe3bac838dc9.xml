@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object">
+  <sys_db_object action="INSERT_OR_UPDATE">
+    <sys_id>22e069a71d614542ad48fe3bac838dc9</sys_id>
+    <sys_scope display_value="x_134879_black_l_0">e41c0d7753ce4710dcd35eb0a0490e3a</sys_scope>
+    <sys_update_name>sys_db_object_22e069a71d614542ad48fe3bac838dc9</sys_update_name>
+    <access>public</access>
+    <actions_access>false</actions_access>
+    <alter_access>false</alter_access>
+    <caller_access/>
+    <client_scripts_access>false</client_scripts_access>
+    <create_access>true</create_access>
+    <create_access_controls>false</create_access_controls>
+    <delete_access>true</delete_access>
+    <is_extendable>false</is_extendable>
+    <label>Team Members</label>
+    <live_feed_enabled>false</live_feed_enabled>
+    <name>x_134879_black_l_0_team_members</name>
+    <number_ref/>
+    <read_access>true</read_access>
+    <scriptable_table>false</scriptable_table>
+    <super_class/>
+    <update_access>true</update_access>
+    <user_role/>
+    <ws_access>true</ws_access>
+  </sys_db_object>
+</record_update>

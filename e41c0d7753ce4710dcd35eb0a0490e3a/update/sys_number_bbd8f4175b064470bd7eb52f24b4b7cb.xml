@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+  <sys_number action="INSERT_OR_UPDATE">
+    <sys_id>bbd8f4175b064470bd7eb52f24b4b7cb</sys_id>
+    <sys_scope display_value="x_134879_black_l_0">e41c0d7753ce4710dcd35eb0a0490e3a</sys_scope>
+    <sys_update_name>sys_number_bbd8f4175b064470bd7eb52f24b4b7cb</sys_update_name>
+    <category>x_134879_black_l_0_characters</category>
+    <maximum_digits>7</maximum_digits>
+    <number>1000</number>
+    <prefix>CHAR</prefix>
+  </sys_number>
+</record_update>

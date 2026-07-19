@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+  <sys_choice_set field="category" table="x_134879_black_l_0_attributes_ref">
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>63f431dd047b48dca740113fbf9ebb06</sys_id>
+      <name>x_134879_black_l_0_attributes_ref</name>
+      <element>category</element>
+      <label>Physical</label>
+      <value>physical</value>
+      <sequence>0</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>851c94e1c1e14942bba490d5b8d8f8a5</sys_id>
+      <name>x_134879_black_l_0_attributes_ref</name>
+      <element>category</element>
+      <label>Mental</label>
+      <value>mental</value>
+      <sequence>1</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>4ce536db286d4e4ba45544a5b1a3c66f</sys_id>
+      <name>x_134879_black_l_0_attributes_ref</name>
+      <element>category</element>
+      <label>Social</label>
+      <value>social</value>
+      <sequence>2</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice_set action="INSERT_OR_UPDATE">
+      <sys_id>90d7546b706947709485111a760e5251</sys_id>
+      <sys_scope display_value="x_134879_black_l_0">e41c0d7753ce4710dcd35eb0a0490e3a</sys_scope>
+      <name>x_134879_black_l_0_attributes_ref</name>
+      <element>category</element>
+    </sys_choice_set>
+  </sys_choice_set>
+</record_update>

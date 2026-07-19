@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+  <sys_choice_set field="classification" table="x_134879_black_l_0_intel_items">
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>1a865d7637764c4cb434796c32fce00e</sys_id>
+      <name>x_134879_black_l_0_intel_items</name>
+      <element>classification</element>
+      <label>Public</label>
+      <value>public</value>
+      <sequence>0</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>efc0907c37284c68b6ce31cd06b3228e</sys_id>
+      <name>x_134879_black_l_0_intel_items</name>
+      <element>classification</element>
+      <label>Restricted</label>
+      <value>restricted</value>
+      <sequence>1</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>64f2c218b85a4e7f85152ff85b245f02</sys_id>
+      <name>x_134879_black_l_0_intel_items</name>
+      <element>classification</element>
+      <label>Secret</label>
+      <value>secret</value>
+      <sequence>2</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>b6e81deac2a24205befa1b414dd24d15</sys_id>
+      <name>x_134879_black_l_0_intel_items</name>
+      <element>classification</element>
+      <label>Black</label>
+      <value>black</value>
+      <sequence>3</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice_set action="INSERT_OR_UPDATE">
+      <sys_id>cf5f8b7e6b064fe0a69d70550aa5be36</sys_id>
+      <sys_scope display_value="x_134879_black_l_0">e41c0d7753ce4710dcd35eb0a0490e3a</sys_scope>
+      <name>x_134879_black_l_0_intel_items</name>
+      <element>classification</element>
+    </sys_choice_set>
+  </sys_choice_set>
+</record_update>

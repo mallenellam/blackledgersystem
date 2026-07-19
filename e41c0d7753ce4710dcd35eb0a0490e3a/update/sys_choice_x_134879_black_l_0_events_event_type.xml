@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+  <sys_choice_set field="event_type" table="x_134879_black_l_0_events">
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>08bc4c28b39d4ea791a2f70dd6bdb55a</sys_id>
+      <name>x_134879_black_l_0_events</name>
+      <element>event_type</element>
+      <label>World</label>
+      <value>world</value>
+      <sequence>0</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>560a09eb20a64a0bac0140721178fda4</sys_id>
+      <name>x_134879_black_l_0_events</name>
+      <element>event_type</element>
+      <label>Faction</label>
+      <value>faction</value>
+      <sequence>1</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>19f049767086401a887e930a8e791901</sys_id>
+      <name>x_134879_black_l_0_events</name>
+      <element>event_type</element>
+      <label>Character</label>
+      <value>character</value>
+      <sequence>2</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>db66e303db384e1fbbc7c5dea7eaa66d</sys_id>
+      <name>x_134879_black_l_0_events</name>
+      <element>event_type</element>
+      <label>Session</label>
+      <value>session</value>
+      <sequence>3</sequence>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice_set action="INSERT_OR_UPDATE">
+      <sys_id>a31bc71fb244434c8c3b33164b02dd5e</sys_id>
+      <sys_scope display_value="x_134879_black_l_0">e41c0d7753ce4710dcd35eb0a0490e3a</sys_scope>
+      <name>x_134879_black_l_0_events</name>
+      <element>event_type</element>
+    </sys_choice_set>
+  </sys_choice_set>
+</record_update>
