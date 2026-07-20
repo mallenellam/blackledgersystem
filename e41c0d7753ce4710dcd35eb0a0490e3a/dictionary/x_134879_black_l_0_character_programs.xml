@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="5ba0e84b4bff431fac563b287b95397b" label="Character Programs" name="x_134879_black_l_0_character_programs" type="collection">
+        <element label="Program" mandatory="true" max_length="32" name="program" reference="x_134879_black_l_0_program_catalog" type="reference"/>
+        <element default="true" label="Installed" max_length="40" name="installed" type="boolean"/>
+        <element choice="1" default="stable" label="Condition" max_length="20" name="condition" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Stable" sequence="0" value="stable"/>
+                <element inactive_on_update="false" label="Degraded" sequence="1" value="degraded"/>
+                <element inactive_on_update="false" label="Corrupted" sequence="2" value="corrupted"/>
+            </choice>
+        </element>
+        <element label="Character" mandatory="true" max_length="32" name="character" reference="x_134879_black_l_0_characters" type="reference"/>
+        <element label="Acquired Date" max_length="40" name="acquired_date" type="glide_date_time"/>
+        <index name="index">
+            <element name="character"/>
+        </index>
+        <index name="index2">
+            <element name="program"/>
+        </index>
+    </element>
+</database>

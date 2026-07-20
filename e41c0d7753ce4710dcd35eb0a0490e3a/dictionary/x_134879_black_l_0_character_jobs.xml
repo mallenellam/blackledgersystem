@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="6c79b04380304e70b7d258ef9ed984d2" label="Character Jobs" name="x_134879_black_l_0_character_jobs" type="collection">
+        <element label="Share Percentage" max_length="40" name="share_percentage" type="integer"/>
+        <element label="Crew" max_length="32" name="crew" reference="x_134879_black_l_0_crews" type="reference"/>
+        <element choice="1" default="assigned" label="Status" max_length="20" name="status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Active" sequence="1" value="active"/>
+                <element inactive_on_update="false" label="Completed" sequence="2" value="completed"/>
+                <element inactive_on_update="false" label="Withdrawn" sequence="3" value="withdrawn"/>
+                <element inactive_on_update="false" label="Assigned" sequence="0" value="assigned"/>
+            </choice>
+        </element>
+        <element label="Character" mandatory="true" max_length="32" name="character" reference="x_134879_black_l_0_characters" type="reference"/>
+        <element label="Job" mandatory="true" max_length="32" name="job" reference="x_134879_black_l_0_jobs" type="reference"/>
+        <element label="Role in Job" max_length="40" name="role_in_job" type="string"/>
+        <index name="index">
+            <element name="character"/>
+        </index>
+        <index name="index2">
+            <element name="crew"/>
+        </index>
+        <index name="index3">
+            <element name="job"/>
+        </index>
+    </element>
+</database>

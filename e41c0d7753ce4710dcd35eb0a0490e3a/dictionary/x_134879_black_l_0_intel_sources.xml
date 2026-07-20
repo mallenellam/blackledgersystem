@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="67f7b67ee06c41be9cf4495122a11a40" label="Intel Sources" name="x_134879_black_l_0_intel_sources" type="collection">
+        <element choice="1" label="Source Type" max_length="40" name="source_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Infiltration" sequence="3" value="infiltration"/>
+                <element inactive_on_update="false" label="Hacking" sequence="2" value="hacking"/>
+                <element inactive_on_update="false" label="Contact" sequence="0" value="contact"/>
+                <element inactive_on_update="false" label="Public" sequence="4" value="public"/>
+                <element inactive_on_update="false" label="Surveillance" sequence="1" value="surveillance"/>
+            </choice>
+        </element>
+        <element label="Associated Faction" max_length="32" name="faction" reference="x_134879_black_l_0_factions" type="reference"/>
+        <element display="true" label="Name" mandatory="true" max_length="100" name="name" type="string"/>
+        <element label="Reliability" max_length="40" name="reliability" type="integer"/>
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <index name="index">
+            <element name="faction"/>
+        </index>
+    </element>
+</database>

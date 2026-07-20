@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="1f81d73049364b438bdd4194f0e24de6" label="Intel Reveals" name="x_134879_black_l_0_intel_reveals" type="collection">
+        <element label="Intel Item" mandatory="true" max_length="32" name="intel_item" reference="x_134879_black_l_0_intel_items" type="reference"/>
+        <element label="Sequence Order" max_length="40" name="sequence_order" type="integer"/>
+        <element label="Reveal Condition" max_length="500" name="reveal_condition" type="string"/>
+        <element label="Revealed" max_length="40" name="revealed" type="boolean"/>
+        <element label="Reveal Text" max_length="2000" name="reveal_text" type="string"/>
+        <index name="index">
+            <element name="intel_item"/>
+        </index>
+    </element>
+</database>

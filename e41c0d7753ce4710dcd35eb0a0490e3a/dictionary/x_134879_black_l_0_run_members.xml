@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="d7456167200b467cac865ff1fe5e157e" label="Run Members" name="x_134879_black_l_0_run_members" type="collection">
+        <element label="Run" mandatory="true" max_length="32" name="run" reference="x_134879_black_l_0_runs" type="reference"/>
+        <element label="Character" mandatory="true" max_length="32" name="character" reference="x_134879_black_l_0_characters" type="reference"/>
+        <element label="Role in Run" max_length="40" name="role_in_run" type="string"/>
+        <element choice="1" default="active" label="Status" max_length="20" name="status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Injured" sequence="1" value="injured"/>
+                <element inactive_on_update="false" label="Captured" sequence="2" value="captured"/>
+                <element inactive_on_update="false" label="Active" sequence="0" value="active"/>
+                <element inactive_on_update="false" label="Extracted" sequence="3" value="extracted"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="character"/>
+        </index>
+        <index name="index2">
+            <element name="run"/>
+        </index>
+    </element>
+</database>

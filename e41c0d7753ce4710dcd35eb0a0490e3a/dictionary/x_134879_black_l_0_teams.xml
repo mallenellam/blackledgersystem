@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="218dab6a25f74401a895af5fddf1d1dc" label="Teams" name="x_134879_black_l_0_teams" type="collection">
+        <element choice="1" default="active" label="Status" max_length="20" name="status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Paused" sequence="1" value="paused"/>
+                <element inactive_on_update="false" label="Active" sequence="0" value="active"/>
+                <element inactive_on_update="false" label="Completed" sequence="2" value="completed"/>
+            </choice>
+        </element>
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element display="true" label="Name" mandatory="true" max_length="100" name="name" type="string"/>
+        <element label="Game Master" max_length="32" name="game_master" reference="sys_user" type="reference"/>
+        <element label="Description" max_length="500" name="description" type="string"/>
+        <index name="index">
+            <element name="game_master"/>
+        </index>
+    </element>
+</database>

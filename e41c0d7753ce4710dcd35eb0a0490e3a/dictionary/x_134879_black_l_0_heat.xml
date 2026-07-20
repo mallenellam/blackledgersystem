@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="cecd382450d3488a912a6124da91451f" label="Heat" name="x_134879_black_l_0_heat" type="collection">
+        <element label="Description" max_length="500" name="description" type="string"/>
+        <element default="0" label="Wanted Level" max_length="40" name="wanted_level" type="integer"/>
+        <element label="Crew" mandatory="true" max_length="32" name="crew" reference="x_134879_black_l_0_crews" type="reference"/>
+        <element label="Last Increase Reason" max_length="200" name="last_increase_reason" type="string"/>
+        <element default="0" label="Heat Level" max_length="40" name="heat_level" type="integer"/>
+        <element label="Last Updated" max_length="40" name="last_updated" type="glide_date_time"/>
+        <index name="index">
+            <element name="crew"/>
+        </index>
+    </element>
+</database>

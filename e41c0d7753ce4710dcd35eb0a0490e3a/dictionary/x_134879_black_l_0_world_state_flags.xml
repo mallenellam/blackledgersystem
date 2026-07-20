@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="4a8b91dc1e524f82a8815c5a4ff19fbe" label="World State Flags" name="x_134879_black_l_0_world_state_flags" type="collection">
+        <element label="Flag Value" max_length="500" name="flag_value" type="string"/>
+        <element label="Description" max_length="500" name="description" type="string"/>
+        <element label="Set By" max_length="32" name="set_by" reference="sys_user" type="reference"/>
+        <element display="true" label="Flag Name" mandatory="true" max_length="100" name="flag_name" type="string"/>
+        <element label="Category" max_length="40" name="category" type="string"/>
+        <element label="Last Changed" max_length="40" name="last_changed" type="glide_date_time"/>
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <index name="index">
+            <element name="set_by"/>
+        </index>
+    </element>
+</database>

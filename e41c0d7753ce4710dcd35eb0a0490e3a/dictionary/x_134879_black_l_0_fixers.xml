@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="e26ab2b775204894afcc2906cec09b1c" label="Fixers" name="x_134879_black_l_0_fixers" type="collection">
+        <element label="Specialty" max_length="100" name="specialty" type="string"/>
+        <element display="true" label="Name" mandatory="true" max_length="100" name="name" type="string"/>
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Description" max_length="1000" name="description" type="string"/>
+        <element label="Faction Affiliation" max_length="32" name="faction_affiliation" reference="x_134879_black_l_0_factions" type="reference"/>
+        <element label="Reputation" max_length="40" name="reputation" type="integer"/>
+        <element label="Contact Method" max_length="200" name="contact_method" type="string"/>
+        <index name="index">
+            <element name="faction_affiliation"/>
+        </index>
+    </element>
+</database>

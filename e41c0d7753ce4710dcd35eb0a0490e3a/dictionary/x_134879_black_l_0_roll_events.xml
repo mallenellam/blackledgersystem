@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="3bff21d0281d48a4b024871414d4570e" label="Roll Events" name="x_134879_black_l_0_roll_events" type="collection">
+        <element display="true" label="Description" max_length="500" name="description" type="string"/>
+        <element label="Team" max_length="32" name="team" reference="x_134879_black_l_0_teams" type="reference"/>
+        <element label="Dice Pool" max_length="40" name="dice_pool" type="integer"/>
+        <element label="Skill Used" max_length="32" name="skill_used" reference="x_134879_black_l_0_skills" type="reference"/>
+        <element label="Rolled At" max_length="40" name="rolled_at" type="glide_date_time"/>
+        <element label="Result" max_length="40" name="result" type="integer"/>
+        <element choice="1" label="Outcome" max_length="20" name="outcome" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Partial Success" sequence="2" value="partial_success"/>
+                <element inactive_on_update="false" label="Failure" sequence="3" value="failure"/>
+                <element inactive_on_update="false" label="Success" sequence="1" value="success"/>
+                <element inactive_on_update="false" label="Critical Failure" sequence="4" value="critical_failure"/>
+                <element inactive_on_update="false" label="Critical Success" sequence="0" value="critical_success"/>
+            </choice>
+        </element>
+        <element label="Character" mandatory="true" max_length="32" name="character" reference="x_134879_black_l_0_characters" type="reference"/>
+        <element label="Run" max_length="32" name="run" reference="x_134879_black_l_0_runs" type="reference"/>
+        <element label="Difficulty Target" max_length="40" name="difficulty_target" type="integer"/>
+        <element label="Job" max_length="32" name="job" reference="x_134879_black_l_0_jobs" type="reference"/>
+        <index name="index">
+            <element name="character"/>
+        </index>
+        <index name="index2">
+            <element name="job"/>
+        </index>
+        <index name="index3">
+            <element name="run"/>
+        </index>
+        <index name="index4">
+            <element name="skill_used"/>
+        </index>
+        <index name="index5">
+            <element name="team"/>
+        </index>
+    </element>
+</database>

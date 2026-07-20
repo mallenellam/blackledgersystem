@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="0e0da8581cc9443382c671deae7e5edb" label="Team Intel Attempts" name="x_134879_black_l_0_team_intel_attempts" type="collection">
+        <element label="Success" max_length="40" name="success" type="boolean"/>
+        <element label="Clock" max_length="32" name="clock" reference="x_134879_black_l_0_clocks" type="reference"/>
+        <element label="Attempted At" max_length="40" name="attempted_at" type="glide_date_time"/>
+        <element label="Attempted By" max_length="32" name="attempted_by" reference="sys_user" type="reference"/>
+        <element label="Run" max_length="32" name="run" reference="x_134879_black_l_0_runs" type="reference"/>
+        <element label="Team" mandatory="true" max_length="32" name="team" reference="x_134879_black_l_0_teams" type="reference"/>
+        <element label="Character" max_length="32" name="character" reference="x_134879_black_l_0_characters" type="reference"/>
+        <element label="Intel Item" mandatory="true" max_length="32" name="intel_item" reference="x_134879_black_l_0_intel_items" type="reference"/>
+        <element label="Roll Event" max_length="32" name="roll_event" reference="x_134879_black_l_0_roll_events" type="reference"/>
+        <index name="index">
+            <element name="attempted_by"/>
+        </index>
+        <index name="index2">
+            <element name="character"/>
+        </index>
+        <index name="index3">
+            <element name="clock"/>
+        </index>
+        <index name="index4">
+            <element name="intel_item"/>
+        </index>
+        <index name="index5">
+            <element name="roll_event"/>
+        </index>
+        <index name="index6">
+            <element name="run"/>
+        </index>
+        <index name="index7">
+            <element name="team"/>
+        </index>
+    </element>
+</database>

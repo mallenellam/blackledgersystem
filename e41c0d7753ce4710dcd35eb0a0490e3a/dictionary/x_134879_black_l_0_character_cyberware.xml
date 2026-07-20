@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="41161cac99b1461eb40470132179d0fb" label="Character Cyberware" name="x_134879_black_l_0_character_cyberware" type="collection">
+        <element label="Installation Roll" max_length="32" name="roll_event" reference="x_134879_black_l_0_roll_events" type="reference"/>
+        <element label="Cyberware" mandatory="true" max_length="32" name="cyberware" reference="x_134879_black_l_0_cyberware_catalog" type="reference"/>
+        <element label="Character" mandatory="true" max_length="32" name="character" reference="x_134879_black_l_0_characters" type="reference"/>
+        <element choice="1" default="pristine" label="Condition" max_length="20" name="condition" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Damaged" sequence="3" value="damaged"/>
+                <element inactive_on_update="false" label="Pristine" sequence="0" value="pristine"/>
+                <element inactive_on_update="false" label="Worn" sequence="2" value="worn"/>
+                <element inactive_on_update="false" label="Good" sequence="1" value="good"/>
+                <element inactive_on_update="false" label="Malfunctioning" sequence="4" value="malfunctioning"/>
+            </choice>
+        </element>
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Installed Date" max_length="40" name="installed_date" type="glide_date_time"/>
+        <index name="index">
+            <element name="character"/>
+        </index>
+        <index name="index2">
+            <element name="cyberware"/>
+        </index>
+        <index name="index3">
+            <element name="roll_event"/>
+        </index>
+    </element>
+</database>

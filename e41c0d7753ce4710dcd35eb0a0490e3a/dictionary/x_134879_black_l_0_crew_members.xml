@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="27344f3b7b34461a8f17e11c7bf899a3" label="Crew Members" name="x_134879_black_l_0_crew_members" type="collection">
+        <element label="Character" mandatory="true" max_length="32" name="character" reference="x_134879_black_l_0_characters" type="reference"/>
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Joined Date" max_length="40" name="joined_date" type="glide_date_time"/>
+        <element label="Crew" mandatory="true" max_length="32" name="crew" reference="x_134879_black_l_0_crews" type="reference"/>
+        <element choice="1" label="Role in Crew" max_length="40" name="role_in_crew" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Lieutenant" sequence="1" value="lieutenant"/>
+                <element inactive_on_update="false" label="Member" sequence="2" value="member"/>
+                <element inactive_on_update="false" label="Leader" sequence="0" value="leader"/>
+                <element inactive_on_update="false" label="Recruit" sequence="3" value="recruit"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="character"/>
+        </index>
+        <index name="index2">
+            <element name="crew"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="d907db3d78ba43e3857288e84c01cb70" label="Team Intel View Data" name="x_134879_black_l_0_team_intel_view_data" type="collection">
+        <element label="Team" mandatory="true" max_length="32" name="team" reference="x_134879_black_l_0_teams" type="reference"/>
+        <element label="First Accessed" max_length="40" name="first_accessed" type="glide_date_time"/>
+        <element label="Intel Item" mandatory="true" max_length="32" name="intel_item" reference="x_134879_black_l_0_intel_items" type="reference"/>
+        <element label="Last Accessed" max_length="40" name="last_accessed" type="glide_date_time"/>
+        <element choice="1" default="partial" label="Access Level" max_length="20" name="access_level" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Full" sequence="1" value="full"/>
+                <element inactive_on_update="false" label="Partial" sequence="0" value="partial"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="intel_item"/>
+        </index>
+        <index name="index2">
+            <element name="team"/>
+        </index>
+    </element>
+</database>

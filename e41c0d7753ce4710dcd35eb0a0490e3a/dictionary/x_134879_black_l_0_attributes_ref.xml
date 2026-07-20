@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="44bcde31d95e4c6bbbb2dfe28152c32b" label="Attributes Reference" name="x_134879_black_l_0_attributes_ref" type="collection">
+        <element default="0" label="Sort Order" max_length="40" name="sort_order" type="integer"/>
+        <element label="Description" max_length="500" name="description" type="string"/>
+        <element display="true" label="Name" mandatory="true" max_length="40" name="name" type="string"/>
+        <element label="Abbreviation" max_length="10" name="abbreviation" type="string"/>
+        <element choice="1" label="Category" max_length="40" name="category" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Social" sequence="2" value="social"/>
+                <element inactive_on_update="false" label="Physical" sequence="0" value="physical"/>
+                <element inactive_on_update="false" label="Mental" sequence="1" value="mental"/>
+            </choice>
+        </element>
+    </element>
+</database>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="b134987c0ea1412c8085bb638431bce0" label="Factions" name="x_134879_black_l_0_factions" type="collection">
+        <element choice="1" label="Type" max_length="40" name="faction_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Nomad Clan" sequence="4" value="nomad"/>
+                <element inactive_on_update="false" label="Government" sequence="2" value="government"/>
+                <element inactive_on_update="false" label="Syndicate" sequence="3" value="syndicate"/>
+                <element inactive_on_update="false" label="Gang" sequence="1" value="gang"/>
+                <element inactive_on_update="false" label="Corporation" sequence="0" value="corporation"/>
+                <element inactive_on_update="false" label="Fixer Network" sequence="5" value="fixer_network"/>
+            </choice>
+        </element>
+        <element label="Description" max_length="2000" name="description" type="string"/>
+        <element label="Territory" max_length="200" name="territory" type="string"/>
+        <element label="Power Level" max_length="40" name="power_level" type="integer"/>
+        <element display="true" label="Name" mandatory="true" max_length="100" name="name" type="string"/>
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+    </element>
+</database>

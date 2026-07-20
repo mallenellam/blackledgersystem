@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="22e069a71d614542ad48fe3bac838dc9" label="Team Members" name="x_134879_black_l_0_team_members" type="collection">
+        <element label="Character" mandatory="true" max_length="32" name="character" reference="x_134879_black_l_0_characters" type="reference"/>
+        <element label="Team" mandatory="true" max_length="32" name="team" reference="x_134879_black_l_0_teams" type="reference"/>
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Joined Date" max_length="40" name="joined_date" type="glide_date_time"/>
+        <element label="Player" max_length="32" name="player" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="character"/>
+        </index>
+        <index name="index2">
+            <element name="player"/>
+        </index>
+        <index name="index3">
+            <element name="team"/>
+        </index>
+    </element>
+</database>

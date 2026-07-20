@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="5062da1b233649348f2b56a6f90358bd" label="Exposure Attempts" name="x_134879_black_l_0_exposure_attempts" type="collection">
+        <element label="Attempted At" max_length="40" name="attempted_at" type="glide_date_time"/>
+        <element label="Success" max_length="40" name="success" type="boolean"/>
+        <element label="Attempted By" max_length="32" name="attempted_by" reference="sys_user" type="reference"/>
+        <element label="Notes" max_length="500" name="notes" type="string"/>
+        <element label="Method" max_length="200" name="method" type="string"/>
+        <element label="Team" max_length="32" name="team" reference="x_134879_black_l_0_teams" type="reference"/>
+        <element label="Intel Item" mandatory="true" max_length="32" name="intel_item" reference="x_134879_black_l_0_intel_items" type="reference"/>
+        <element label="Character" max_length="32" name="character" reference="x_134879_black_l_0_characters" type="reference"/>
+        <index name="index">
+            <element name="attempted_by"/>
+        </index>
+        <index name="index2">
+            <element name="character"/>
+        </index>
+        <index name="index3">
+            <element name="intel_item"/>
+        </index>
+        <index name="index4">
+            <element name="team"/>
+        </index>
+    </element>
+</database>

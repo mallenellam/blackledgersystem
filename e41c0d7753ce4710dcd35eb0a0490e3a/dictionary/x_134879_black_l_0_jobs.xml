@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="dd1755782fe84d6e93a72dc707f0e6ec" label="Jobs" name="x_134879_black_l_0_jobs" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Difficulty" max_length="40" name="difficulty" type="integer"/>
+        <element label="Deadline" max_length="40" name="deadline" type="glide_date_time"/>
+        <element label="Location" max_length="32" name="location" reference="x_134879_black_l_0_locations" type="reference"/>
+        <element label="Description" max_length="4000" name="description" type="string"/>
+        <element label="Payout (credits)" max_length="40" name="payout" type="integer"/>
+        <element label="Fixer" max_length="32" name="fixer" reference="x_134879_black_l_0_fixers" type="reference"/>
+        <element choice="1" label="Job Type" max_length="40" name="job_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Sabotage" sequence="1" value="sabotage"/>
+                <element inactive_on_update="false" label="Extraction" sequence="0" value="extraction"/>
+                <element inactive_on_update="false" label="Theft" sequence="2" value="theft"/>
+                <element inactive_on_update="false" label="Hacking" sequence="7" value="hacking"/>
+                <element inactive_on_update="false" label="Delivery" sequence="5" value="delivery"/>
+                <element inactive_on_update="false" label="Assassination" sequence="3" value="assassination"/>
+                <element inactive_on_update="false" label="Escort" sequence="4" value="escort"/>
+                <element inactive_on_update="false" label="Recon" sequence="6" value="recon"/>
+            </choice>
+        </element>
+        <element choice="1" default="available" label="Status" max_length="20" name="status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Available" sequence="0" value="available"/>
+                <element inactive_on_update="false" label="Failed" sequence="4" value="failed"/>
+                <element inactive_on_update="false" label="Abandoned" sequence="5" value="abandoned"/>
+                <element inactive_on_update="false" label="In Progress" sequence="2" value="in_progress"/>
+                <element inactive_on_update="false" label="Accepted" sequence="1" value="accepted"/>
+                <element inactive_on_update="false" label="Completed" sequence="3" value="completed"/>
+            </choice>
+        </element>
+        <element label="Target Faction" max_length="32" name="target_faction" reference="x_134879_black_l_0_factions" type="reference"/>
+        <element display="true" label="Title" mandatory="true" max_length="200" name="title" type="string"/>
+        <index name="index">
+            <element name="fixer"/>
+        </index>
+        <index name="index2">
+            <element name="location"/>
+        </index>
+        <index name="index3">
+            <element name="target_faction"/>
+        </index>
+    </element>
+</database>

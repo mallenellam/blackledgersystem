@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="2c9e0249983a4cc99e4c5d76988b34e7" label="Run Payouts" name="x_134879_black_l_0_run_payouts" type="collection">
+        <element default="0" label="Bonus" max_length="40" name="bonus" type="integer"/>
+        <element label="Character" mandatory="true" max_length="32" name="character" reference="x_134879_black_l_0_characters" type="reference"/>
+        <element label="Paid By" max_length="32" name="paid_by" reference="sys_user" type="reference"/>
+        <element label="Run" mandatory="true" max_length="32" name="run" reference="x_134879_black_l_0_runs" type="reference"/>
+        <element label="Amount (credits)" mandatory="true" max_length="40" name="amount" type="integer"/>
+        <element label="Notes" max_length="200" name="notes" type="string"/>
+        <index name="index">
+            <element name="character"/>
+        </index>
+        <index name="index2">
+            <element name="paid_by"/>
+        </index>
+        <index name="index3">
+            <element name="run"/>
+        </index>
+    </element>
+</database>

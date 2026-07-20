@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
-  <sys_script_include action="INSERT_OR_UPDATE">
-    <sys_id>a2cab47b7e9743cc8219ade482e72697</sys_id>
-    <sys_scope display_value="x_134879_black_l_0">e41c0d7753ce4710dcd35eb0a0490e3a</sys_scope>
-    <sys_update_name>sys_script_include_a2cab47b7e9743cc8219ade482e72697</sys_update_name>
-    <access>public</access>
-    <active>true</active>
-    <api_name>x_134879_black_l_0.BlackLedgerDice</api_name>
-    <caller_access/>
-    <client_callable>true</client_callable>
-    <description>Dice resolution engine for the Black Ledger System. Handles rolling attribute dice vs difficulty dice, computing outcomes by difference, and stepping die sizes up/down.</description>
-    <mobile_callable>false</mobile_callable>
-    <name>BlackLedgerDice</name>
-    <sandbox_callable>false</sandbox_callable>
-    <script><![CDATA[var BlackLedgerDice = Class.create()
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_134879_black_l_0.BlackLedgerDice</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>Dice resolution engine for the Black Ledger System. Handles rolling attribute dice vs difficulty dice, computing outcomes by difference, and stepping die sizes up/down.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>BlackLedgerDice</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var BlackLedgerDice = Class.create()
 
 BlackLedgerDice.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 
@@ -151,5 +148,17 @@ BlackLedgerDice.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
     type: 'BlackLedgerDice'
 });
 ]]></script>
-  </sys_script_include>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-19 22:44:31</sys_created_on>
+        <sys_id>a2cab47b7e9743cc8219ade482e72697</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BlackLedgerDice</sys_name>
+        <sys_package display_value="Black Ledger System" source="x_134879_black_l_0">e41c0d7753ce4710dcd35eb0a0490e3a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Black Ledger System">e41c0d7753ce4710dcd35eb0a0490e3a</sys_scope>
+        <sys_update_name>sys_script_include_a2cab47b7e9743cc8219ade482e72697</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-19 22:44:31</sys_updated_on>
+    </sys_script_include>
 </record_update>

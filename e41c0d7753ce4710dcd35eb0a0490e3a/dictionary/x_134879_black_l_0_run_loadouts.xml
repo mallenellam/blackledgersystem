@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="6bed57e232f54f36a0c146436ca44330" label="Run Loadouts" name="x_134879_black_l_0_run_loadouts" type="collection">
+        <element label="Character" mandatory="true" max_length="32" name="character" reference="x_134879_black_l_0_characters" type="reference"/>
+        <element label="Run" mandatory="true" max_length="32" name="run" reference="x_134879_black_l_0_runs" type="reference"/>
+        <element label="Equipment Notes" max_length="500" name="equipment_notes" type="string"/>
+        <element label="Program" max_length="32" name="program" reference="x_134879_black_l_0_program_catalog" type="reference"/>
+        <index name="index">
+            <element name="character"/>
+        </index>
+        <index name="index2">
+            <element name="program"/>
+        </index>
+        <index name="index3">
+            <element name="run"/>
+        </index>
+    </element>
+</database>

@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
-  <sys_number action="INSERT_OR_UPDATE">
-    <sys_id>77237437f9674015a4aae181046795ef</sys_id>
-    <sys_scope display_value="x_134879_black_l_0">e41c0d7753ce4710dcd35eb0a0490e3a</sys_scope>
-    <sys_update_name>sys_number_77237437f9674015a4aae181046795ef</sys_update_name>
-    <category>x_134879_black_l_0_crews</category>
-    <maximum_digits>7</maximum_digits>
-    <number>1000</number>
-    <prefix>CREW</prefix>
-  </sys_number>
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_134879_black_l_0_crews">x_134879_black_l_0_crews</category>
+        <maximum_digits>7</maximum_digits>
+        <number>1000</number>
+        <prefix>CREW</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-19 20:36:46</sys_created_on>
+        <sys_id>77237437f9674015a4aae181046795ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CREW</sys_name>
+        <sys_package display_value="Black Ledger System" source="x_134879_black_l_0">e41c0d7753ce4710dcd35eb0a0490e3a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Black Ledger System">e41c0d7753ce4710dcd35eb0a0490e3a</sys_scope>
+        <sys_update_name>sys_number_77237437f9674015a4aae181046795ef</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-19 20:36:46</sys_updated_on>
+    </sys_number>
 </record_update>

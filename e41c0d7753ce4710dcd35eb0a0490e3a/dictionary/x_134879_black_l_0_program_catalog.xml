@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="83b91e4e23b24cf394aab47dfe7637a7" label="Program Catalog" name="x_134879_black_l_0_program_catalog" type="collection">
+        <element label="Cost (credits)" max_length="40" name="cost" type="integer"/>
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Description" max_length="1000" name="description" type="string"/>
+        <element choice="1" label="Type" max_length="40" name="program_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Utility" sequence="3" value="utility"/>
+                <element inactive_on_update="false" label="Attacker" sequence="2" value="attacker"/>
+                <element inactive_on_update="false" label="Black ICE" sequence="4" value="black_ice"/>
+                <element inactive_on_update="false" label="Defender" sequence="1" value="defender"/>
+                <element inactive_on_update="false" label="Booster" sequence="0" value="booster"/>
+            </choice>
+        </element>
+        <element display="true" label="Name" mandatory="true" max_length="100" name="name" type="string"/>
+        <element label="Rating" max_length="40" name="rating" type="integer"/>
+        <element default="1" label="Slots Required" max_length="40" name="slots_required" type="integer"/>
+    </element>
+</database>

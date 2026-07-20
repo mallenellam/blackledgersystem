@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="body_slot" table="x_134879_black_l_0_cyberware_catalog" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>body_slot</element>
+            <name>x_134879_black_l_0_cyberware_catalog</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-07-19 20:34:58</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>body_slot</sys_name>
+            <sys_package display_value="Black Ledger System" source="x_134879_black_l_0">e41c0d7753ce4710dcd35eb0a0490e3a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Black Ledger System">e41c0d7753ce4710dcd35eb0a0490e3a</sys_scope>
+            <sys_update_name>sys_choice_x_134879_black_l_0_cyberware_catalog_body_slot</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-07-19 20:34:58</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>body_slot</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Neural</label>
+            <language>en</language>
+            <name>x_134879_black_l_0_cyberware_catalog</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-07-20 00:08:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-07-20 00:08:55</sys_updated_on>
+            <value>neural</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>body_slot</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Optics</label>
+            <language>en</language>
+            <name>x_134879_black_l_0_cyberware_catalog</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-07-20 00:08:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-07-20 00:08:55</sys_updated_on>
+            <value>optics</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>body_slot</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Limb</label>
+            <language>en</language>
+            <name>x_134879_black_l_0_cyberware_catalog</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-07-20 00:08:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-07-20 00:08:55</sys_updated_on>
+            <value>limb</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>body_slot</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Torso</label>
+            <language>en</language>
+            <name>x_134879_black_l_0_cyberware_catalog</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-07-20 00:08:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-07-20 00:08:55</sys_updated_on>
+            <value>torso</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>body_slot</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Skin</label>
+            <language>en</language>
+            <name>x_134879_black_l_0_cyberware_catalog</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-07-20 00:08:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-07-20 00:08:55</sys_updated_on>
+            <value>skin</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>body_slot</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Internal</label>
+            <language>en</language>
+            <name>x_134879_black_l_0_cyberware_catalog</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-07-20 00:08:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-07-20 00:08:55</sys_updated_on>
+            <value>internal</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

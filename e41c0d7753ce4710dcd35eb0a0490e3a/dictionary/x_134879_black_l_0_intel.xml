@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="825a07bf12634d07bb3a32501eea4e75" label="Intel" name="x_134879_black_l_0_intel" type="collection">
+        <element label="Intel Item" mandatory="true" max_length="32" name="intel_item" reference="x_134879_black_l_0_intel_items" type="reference"/>
+        <element label="Acquired Date" max_length="40" name="acquired_date" type="glide_date_time"/>
+        <element label="Notes" max_length="1000" name="notes" type="string"/>
+        <element label="Job" max_length="32" name="job" reference="x_134879_black_l_0_jobs" type="reference"/>
+        <element label="Character" max_length="32" name="character" reference="x_134879_black_l_0_characters" type="reference"/>
+        <index name="index">
+            <element name="character"/>
+        </index>
+        <index name="index2">
+            <element name="intel_item"/>
+        </index>
+        <index name="index3">
+            <element name="job"/>
+        </index>
+    </element>
+</database>

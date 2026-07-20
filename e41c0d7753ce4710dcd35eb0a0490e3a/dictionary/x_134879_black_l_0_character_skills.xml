@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="1e536a586bd84cf692d07e5c64f04aaf" label="Character Skills" name="x_134879_black_l_0_character_skills" type="collection">
+        <element default="0" label="Experience Points" max_length="40" name="experience_points" type="integer"/>
+        <element label="Character" mandatory="true" max_length="32" name="character" reference="x_134879_black_l_0_characters" type="reference"/>
+        <element label="Skill" mandatory="true" max_length="32" name="skill" reference="x_134879_black_l_0_skills" type="reference"/>
+        <element default="0" label="Level" max_length="40" name="level" type="integer"/>
+        <index name="index">
+            <element name="character"/>
+        </index>
+        <index name="index2">
+            <element name="skill"/>
+        </index>
+    </element>
+</database>

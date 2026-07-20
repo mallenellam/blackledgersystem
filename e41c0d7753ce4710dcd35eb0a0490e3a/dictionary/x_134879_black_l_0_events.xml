@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="1f4f99d5068e40a083a9680381a23c78" label="Events" name="x_134879_black_l_0_events" type="collection">
+        <element label="Impact" max_length="1000" name="impact" type="string"/>
+        <element label="Location" max_length="32" name="location" reference="x_134879_black_l_0_locations" type="reference"/>
+        <element label="Character" max_length="32" name="character" reference="x_134879_black_l_0_characters" type="reference"/>
+        <element label="Description" max_length="4000" name="description" type="string"/>
+        <element label="Triggered By" max_length="32" name="triggered_by" reference="sys_user" type="reference"/>
+        <element choice="1" label="Event Type" max_length="40" name="event_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="World" sequence="0" value="world"/>
+                <element inactive_on_update="false" label="Character" sequence="2" value="character"/>
+                <element inactive_on_update="false" label="Faction" sequence="1" value="faction"/>
+                <element inactive_on_update="false" label="Session" sequence="3" value="session"/>
+            </choice>
+        </element>
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Event Date" max_length="40" name="event_date" type="glide_date_time"/>
+        <element label="Faction" max_length="32" name="faction" reference="x_134879_black_l_0_factions" type="reference"/>
+        <element display="true" label="Title" mandatory="true" max_length="200" name="title" type="string"/>
+        <index name="index">
+            <element name="character"/>
+        </index>
+        <index name="index2">
+            <element name="faction"/>
+        </index>
+        <index name="index3">
+            <element name="location"/>
+        </index>
+        <index name="index4">
+            <element name="triggered_by"/>
+        </index>
+    </element>
+</database>

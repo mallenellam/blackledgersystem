@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="086449c9ba2f4d0d9816aa3f0645c3d8" label="Crews" name="x_134879_black_l_0_crews" type="collection">
+        <element choice="1" default="active" label="Status" max_length="20" name="status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Underground" sequence="2" value="underground"/>
+                <element inactive_on_update="false" label="Active" sequence="0" value="active"/>
+                <element inactive_on_update="false" label="Disbanded" sequence="1" value="disbanded"/>
+            </choice>
+        </element>
+        <element display="true" label="Name" mandatory="true" max_length="100" name="name" type="string"/>
+        <element default="0" label="Reputation" max_length="40" name="reputation" type="integer"/>
+        <element choice="1" label="Crew Type" max_length="40" name="crew_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Hackers" sequence="3" value="hackers"/>
+                <element inactive_on_update="false" label="Enforcers" sequence="4" value="enforcers"/>
+                <element inactive_on_update="false" label="Fixers" sequence="2" value="fixers"/>
+                <element inactive_on_update="false" label="Heist" sequence="1" value="heist"/>
+                <element inactive_on_update="false" label="Mercenary" sequence="0" value="mercenary"/>
+            </choice>
+        </element>
+        <element label="Description" max_length="1000" name="description" type="string"/>
+        <element label="Territory" max_length="200" name="territory" type="string"/>
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+    </element>
+</database>
