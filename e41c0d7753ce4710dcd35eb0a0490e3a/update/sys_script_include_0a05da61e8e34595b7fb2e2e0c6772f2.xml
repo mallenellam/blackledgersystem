@@ -16,10 +16,8 @@
 
 BlackLedgerCharacterCreation.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 
-    initialize: function () {
-        this.ATTRIBUTES = ['Body', 'Reflexes', 'Tech', 'Cool', 'Intelligence', 'Willpower'];
-        this.VALID_DICE = ['d4', 'd6', 'd8'];
-    },
+    ATTRIBUTES: ['Body', 'Reflexes', 'Tech', 'Cool', 'Intelligence', 'Willpower'],
+    VALID_DICE: ['d4', 'd6', 'd8'],
 
     /**
      * Validate that a die allocation follows character creation rules:
@@ -153,10 +151,10 @@ BlackLedgerCharacterCreation.prototype = Object.extendsObject(global.AbstractAja
 
     /**
      * GlideAjax entry point: create a character
-     * Parameters: sysparm_name, sysparm_handle, sysparm_role, sysparm_backstory, sysparm_allocation
+     * Parameters: sysparm_char_name, sysparm_handle, sysparm_role, sysparm_backstory, sysparm_allocation
      */
     ajaxCreateCharacter: function () {
-        var name = this.getParameter('sysparm_name');
+        var name = this.getParameter('sysparm_char_name');
         var handle = this.getParameter('sysparm_handle') || '';
         var role = this.getParameter('sysparm_role') || '';
         var backstory = this.getParameter('sysparm_backstory') || '';
